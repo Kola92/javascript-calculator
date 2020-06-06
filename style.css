@@ -1,0 +1,190 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Fira Code", sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+button {
+  font-family: "Fira Code";
+  color: white;
+  outline: 1px solid black;
+  border: none;
+  font-size: 20px;
+  cursor: default;
+}
+
+.calculator {
+  background-color: black;
+  width: 100%;
+  max-width: 450px;
+  height: 400px;
+  position: relative;
+}
+
+.calculator .calculator-btns {
+  padding: 5px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 0.1px;
+  grid-template-areas:
+    "clear backspace divide multiply"
+    "seven eight nine minus"
+    "four five six plus"
+    "one two three equal"
+    "zero zero decimal equal";
+  display: grid;
+  flex-direction: row;
+  height: 80%;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  /* min-width: 44.7vw; */
+}
+
+#display {
+  height: 40px;
+  color: white;
+  text-align: right;
+  line-height: 35px;
+  padding-right: 5px;
+  font-size: 29px;
+}
+
+.formulaScreen {
+  height: 40px;
+  padding-right: 5px;
+}
+
+#clear {
+  background-color: crimson;
+  grid-area: clear;
+}
+
+#backspace {
+  grid-area: backspace;
+  background-color: hsl(0, 10%, 20.2%);
+}
+
+#backspace:hover {
+  background-color: hsla(0, 10%, 20.2%, 0.4);
+  color: black;
+  outline: 0.05em solid hsl(0, 0%, 50.2%);
+  z-index: 3;
+}
+
+#clear:hover {
+  background-color: hsla(348, 83.3%, 47.1%, 0.8);
+  color: black;
+  outline: 0.05em solid hsl(0, 0%, 50.2%);
+  z-index: 3;
+}
+
+#multiply {
+  grid-area: multiply;
+}
+
+#divide {
+  grid-area: divide;
+}
+
+#minus {
+  grid-area: minus;
+}
+
+#decimal {
+  grid-area: decimal;
+  background-color: hsl(0, 10%, 20.2%);
+}
+
+#decimal:hover {
+  background-color: hsla(0, 10%, 20.2%, 0.4);
+  color: black;
+  outline: 0.05em solid hsl(0, 0%, 50.2%);
+  z-index: 3;
+}
+
+#seven {
+  grid-area: seven;
+}
+
+#add {
+  grid-area: plus;
+}
+
+#eight {
+  grid-area: eight;
+}
+
+#six {
+  grid-area: six;
+}
+
+#five {
+  grid-area: five;
+}
+
+#four {
+  grid-area: four;
+}
+
+#three {
+  grid-area: three;
+}
+
+#two {
+  grid-area: two;
+}
+
+#one {
+  grid-area: one;
+}
+
+#zero {
+  grid-area: zero;
+}
+
+.number-operators {
+  background-color: goldenrod;
+}
+
+.number-operators:hover {
+  background-color: hsla(42.9, 74.4%, 49%, 0.8);
+  color: black;
+  outline: 0.05em solid hsl(0, 0%, 50.2%);
+  z-index: 3;
+}
+
+#equals {
+  background-color: teal;
+  grid-area: equal;
+}
+
+#equals:hover {
+  background-color: hsla(180, 100%, 25.1%, 0.8);
+  color: black;
+  outline: 0.05em solid hsl(0, 0%, 50.2%);
+  z-index: 3;
+}
+
+.number-btn {
+  background-color: hsl(0, 10%, 20.2%);
+}
+
+.number-btn:hover {
+  background-color: hsla(0, 10%, 20.2%, 0.4);
+  color: black;
+  outline: 0.05em solid hsl(0, 0%, 50.2%);
+  z-index: 3;
+}
